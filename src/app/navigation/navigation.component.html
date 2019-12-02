@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row #toolbarRow>
-    <a mat-button [routerLink]="['/']">Angular Material Navigation</a>
+    <a mat-button [routerLink]="['/']">Angular DOM Queries using ViewChild and ViewChildren</a>
     <!-- NOTE: use of $implicit below causes loop variable link to have a type of CustomLink -->
     <ng-template ngFor let-link="$implicit" [ngForOf]="links">
       <a mat-button
