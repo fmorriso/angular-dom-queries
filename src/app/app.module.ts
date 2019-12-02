@@ -8,13 +8,15 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { CustomMaterialModule } from './shared/custom-material.module';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HelloComponent } from './hello/hello.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HelloComponent
   ],
   imports: [
     BrowserModule,
