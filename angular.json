@@ -41,7 +41,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -54,12 +54,17 @@
           },
           "configurations": {
             "development": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "optimization": false,
               "outputHashing": "none",
               "sourceMap": true,
               "extractCss": true,
               "namedChunks": true,
-              "aot": false,
               "extractLicenses": true,
               "vendorChunk": true,
               "buildOptimizer": false
@@ -76,7 +81,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -161,5 +165,8 @@
       }
     }
   },
-  "defaultProject": "angular-dom-queries"
+  "defaultProject": "angular-dom-queries",
+  "cli": {
+    "analytics": "86ab6f62-1b0f-47c1-9fc1-fa0acef2d456"
+  }
 }
