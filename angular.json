@@ -63,11 +63,11 @@
               "optimization": false,
               "outputHashing": "none",
               "sourceMap": true,
-              "extractCss": true,
               "namedChunks": true,
               "extractLicenses": true,
               "vendorChunk": true,
-              "buildOptimizer": false
+              "buildOptimizer": false,
+              "progress": true
             },
             "production": {
               "fileReplacements": [
@@ -79,11 +79,11 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
+              "progress": true,
               "budgets": [
                 {
                   "type": "initial",
