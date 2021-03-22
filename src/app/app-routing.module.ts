@@ -13,8 +13,9 @@ const routes: Routes = [
 ];
 
 const routeOptions: ExtraOptions = {
-  enableTracing: true,
-  useHash: false
+    enableTracing: true,
+    useHash: false,
+    relativeLinkResolution: 'legacy'
 };
 
 @NgModule({
