@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, ElementRef, QueryList, ViewChildren } from '@angular/core';
 //
 import { HelloComponent } from '../hello/hello.component';
 
@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   name = 'Angular';
   @ViewChild(HelloComponent, { static: false }) hello: HelloComponent;
   @ViewChild('pRef', { static: false }) pRef: ElementRef;
+  @ViewChildren(HelloComponent) hellos: QueryList<any>;
 
   constructor() { }
 
@@ -19,6 +20,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     console.log('Hello ', this.hello.name);
     console.log(this.pRef.nativeElement.innerHTML);
     this.pRef.nativeElement.innerHTML = 'DOM updated successfully!!!';
+    this.hellos.forEach(hello => console.log(hello.name));
   }
 
   ngOnInit() {
