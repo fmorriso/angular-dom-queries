@@ -23,45 +23,28 @@ export class HomeComponent implements OnInit, AfterViewInit {
           .then(() => this.buildMessage())
           .then(() => this.changeDom()
           );
-
      */
     /* using ChangeDetectorRef */
-    this.changeDom();
+    this.changepRef();
     this.buildMessage();
 
-    // must be last
+    // must be last if injecting ChangeDetectorRef
     this.cd.detectChanges();
-
-    // console.log('Hello ' + this.hello.name);
-    // console.log(this.pRef.nativeElement.innerHTML);
-    /*
-    this.pRef.nativeElement.innerHTML = 'DOM updated successfully!!!';
-    this.hellos.forEach(hello => console.log(hello.name));
-    let localMessage = '';
-    this.hellos.forEach(hello => localMessage += hello.name + ', ');
-    this.message = localMessage;
-    console.log(this.message);
-    */
   }
 
-  private changeDom(): void {
+  private changepRef(): void {
     this.pRef.nativeElement.innerHTML = 'DOM updated successfully!!!';
   }
 
   private buildMessage(): void {
     const arr: string[] = [];
-    this.hellos.forEach(hello => arr.push(hello.name.trim()));
-    console.log('arry:' + arr);
-    let localMessage = ''; // arr.join(', ');
-    for (let index = 0; index < arr.length; index++) {
-      localMessage += arr[index];
-      if (index > 0 && index < arr.length - 1) {
-        localMessage += ', ';
-      }
-    }
-    localMessage = 'Hellos: ' + localMessage;
+    let lth = 0;
+    this.hellos.forEach(hello => lth = arr.push(hello.name.trim()));
+    console.log('arr after forEach:' + arr);
+    // const lth: number = arr.length;
+    console.log('arr length: ' + arr.length);
+    const localMessage = 'Hellos: ' + arr.join(', ');
     console.log('localMessage after join: ' + localMessage);
-    localMessage.replace(':,', ':');
     this.message = localMessage;
   }
 
