@@ -1,7 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-hello',
+  // tslint:disable-next-line: component-selector
+  selector: 'hello',
   templateUrl: './hello.component.html',
   styleUrls: ['./hello.component.scss']
 })
