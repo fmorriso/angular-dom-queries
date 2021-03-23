@@ -12,7 +12,7 @@ export class NavigationComponent implements OnInit {
   background = 'primary';
   links: CustomLink[] = [];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   ngOnInit() {
     // build the navigation links using the Angular route config that was defined in app-routing.module.ts
