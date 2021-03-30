@@ -8,7 +8,9 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class HelloComponent implements OnInit {
   @Input() name: string;
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
